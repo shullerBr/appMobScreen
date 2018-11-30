@@ -10,7 +10,7 @@ class Challenge(models.Model):
     #slug = models.SlugField()
     description = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
-    image = models.ImageField()
+    #image = models.ImageField()
     points_events = models.IntegerField(default=2)
     total_events = models.IntegerField(default=0)
     goal = models.IntegerField(default=40)
