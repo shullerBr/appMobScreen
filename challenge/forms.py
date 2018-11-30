@@ -9,11 +9,11 @@ class ChallengeForm(forms.ModelForm):
 
 
         #fields =['title','description','image','total_events','points_events','goal','beat_events',]
-        fields =['title','des_event','image','total_events','points_events','goal','beat_events',]
+        fields =['title','description','image','total_events','points_events','goal','beat_events',]
         #fields =
         labels = {
             'title'             :   'Título',
-            'des_event'         :   'Descrição do Evento',
+            'description'       :   'Descrição do Evento',
             'image'             :   'Imagem',
             'total_events'      :   'Quantidade de eventos',
             'points_events'     :   'Pontos por evento',

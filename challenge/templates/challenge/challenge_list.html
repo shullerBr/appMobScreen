@@ -11,7 +11,7 @@
                     <td colspan="4"> 
                         <h1><a href="">{{ challenge.title }}</a></h1>
                         
-                        {{ challenge.des_event}}</p></td>  
+                        {{ challenge.description|linebreaksbr }}</p></td>  
 
                     <td align="right"><img  width="90" height="90" src="{% static 'star.jpeg' %}"/>    
                     <td rowspan="4" align="center">
@@ -31,7 +31,7 @@
                     <td align="right"> {{ challenge.beat_points }}/{{ challenge.goal }} <br>  Pontos </td> 
                 </tr>
             </table> 
-
+             
         </div>
     {% endfor %}
 {% endblock %}
