@@ -10,12 +10,12 @@ class Challenge(models.Model):
     description = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     #image = models.ImageField(default = 'default.jpg', blank=True)
-    #points_events = models.IntegerField(default=2)
-    #total_events = models.IntegerField()
-    #goal = models.IntegerField(default=40)
-    #beat_events = models.IntegerField(default=0)
-    #beat_points = models.IntegerField()
-    #porcent = models.IntegerField()
+    points_events = models.IntegerField(default=2)
+    total_events = models.IntegerField(default=0)
+    goal = models.IntegerField(default=40)
+    beat_events = models.IntegerField(default=0)
+    beat_points = models.IntegerField(default=0)
+    porcent = models.IntegerField(default=0)
 
     #published_date = models.DateTimeField(blank=True, null=True)
 
