@@ -7,7 +7,7 @@ class Challenge(models.Model):
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     #slug = models.SlugField()
-    description = models.TextField()
+    description = models.CharField(max_length=100)
     created_date = models.DateTimeField(default=timezone.now)
     image = models.ImageField(default = 'default.jpg', blank=True)
     points_events = models.IntegerField(default=2)
