@@ -28,9 +28,10 @@ def challenge_detail(request, pk):
     #return HttpResponse(pk)
     return render(request, 'challenge/challenge_detail.html', {'challenge': challenge})
 
+@login_required(login_url="/account/login/")
 def challenge_create(request):
     if request.method == "POST":
-        form = ChallengeForm(request.POST,request.FILES)
+        form = ChallengeForm(request.POST,request.FILES or None)
         if form.is_valid():
             #return redirect('../../challenge/')
             instance = form.save(commit=False)
@@ -44,7 +45,7 @@ def challenge_create(request):
         form = ChallengeForm()
     return render(request, 'challenge/challenge_create.html', {'form': form})
 
-
+@login_required(login_url="/account/login/")
 def challenge_edit(request, pk):
 
      challenge = get_object_or_404(Challenge, pk=pk)

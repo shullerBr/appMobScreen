@@ -9,5 +9,6 @@ urlpatterns = [
     path('create/', views.challenge_create, name='challenge_create'),
     #path('challenge/<int:pk>/', views.challenge_detail, name='challenge_detail'),
     path('challenge/<int:pk>/edit/', views.challenge_edit, name='challenge_edit'),
-
 ]
+
+
